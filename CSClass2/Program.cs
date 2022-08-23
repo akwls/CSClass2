@@ -10,6 +10,7 @@ namespace CSClass2
     {
         static void Main(string[] args)
         {
+            Wanted<String> wantedSTring = new Wanted<String>("String");
         }
     }
 }

@@ -10,7 +10,17 @@ namespace CSClass2
     {
         static void Main(string[] args)
         {
-            Wanted<String> wantedSTring = new Wanted<String>("String");
+            Wanted<string> WantedString = new Wanted<string>("String");
+            Wanted<int> WantedInt = new Wanted<int>(12345);
+            Wanted<double> WantedDouble = new Wanted<double>(12.345);
+
+            Console.WriteLine(WantedString.Value);
+            Console.WriteLine(WantedInt.Value);
+            Console.WriteLine(WantedDouble.Value);
+
+            Products p = new Products();
+            Console.WriteLine(p[4]);
+            p[4] = 5;
         }
     }
 }

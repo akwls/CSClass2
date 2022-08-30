@@ -65,6 +65,34 @@ namespace CSClass2
             pointStructB.x = 100; pointStructB.y = 200;
             Console.WriteLine(pointStructA.x + " / " + pointStructA.y);
             Console.WriteLine(pointStructB.x + " / " + pointStructB.y);
+
+            using (Dummy dummy = new Dummy())
+            {
+                List<Product> list = new List<Product>()
+            {
+                new Product() { Name="고구마", Price = 1500},
+                new Product() { Name="사과", Price = 2400},
+                new Product() { Name="바나나", Price = 2000},
+                new Product() { Name="배", Price = 9000}
+            };
+                list.Sort();
+                foreach (var item in list)
+                {
+                    Console.WriteLine(item);
+                }
+            }
+
+
+            
+        }
+
+        class Dummy : IDisposable
+        {
+            // using 구문을 벗어날 때 실행됨.
+            public void Dispose()
+            {
+                Console.WriteLine("Dispose() 실행!");
+            }
         }
 
         static void NextPos(int x, int y, int vx, int vy, out int rx, out int ry)

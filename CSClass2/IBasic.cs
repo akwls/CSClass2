@@ -8,6 +8,7 @@ namespace CSClass2
 {
     interface IBasic
     {
-
+        int TestInstanceMathod();
+        int TestProperty { get; set; }
     }
 }

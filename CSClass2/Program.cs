@@ -82,8 +82,22 @@ namespace CSClass2
                 }
             }
 
-
+            IBasic basic = new TestClass();
+            // basic.something();
+            (basic as TestClass).something();
             
+        }
+
+        class TestClass : IBasic
+        {
+            public int TestProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+            public int TestInstanceMathod()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void something() { }
         }
 
         class Dummy : IDisposable

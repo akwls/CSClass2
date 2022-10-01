@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -90,6 +91,9 @@ namespace CSClass2
             Parent childAsParent = c;
             IDisposable childAsDisposable = c;
             IComparable<Child> childAsComparable = c;
+
+            File.WriteAllText(@"C:\TEMP\test.txt", "문자열 메시지를 씁니다.");
+            Console.WriteLine(File.ReadAllText(@"C:\TEMP\test.txt"));
             
         }
 
